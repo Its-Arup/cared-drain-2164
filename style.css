@@ -136,7 +136,7 @@ nav{
         gap: 40px;
         flex-direction: column;
         background-color: #292525;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.8);
         width: 100%;
         text-align: center;
         transition: 0.3s;
