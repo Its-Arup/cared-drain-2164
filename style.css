@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* font-family: 'Poppins', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background: url(./images/hero-image-renew.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.ham{
+    width: 100%;
+    /* background-color: #292525; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    color: azure;
+}
+.logo{
+    margin: 0 0 0 20px;
+    width: 200px
+}
+.logo img{
+    width: 100%;
+}
+nav{
+    margin: 0 20px ;
+}
+.nav-menu{
+    display: flex;
+    gap: 60px;
+}
+.nav-links{
+    list-style: none;
+}
+.nav-links a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+.nav-links a:hover{
+    color: #fc8067;
+}
+
+.book{
+    margin: 0 20px;
+    padding: 10px 20px;
+    background-color: #ffd75a;
+    color: #000;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu{
+    display: none;
+    margin: 0 20px;
+}
+.bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;;
+}
+@media (max-width:1024px){
+    .nav-menu{
+        gap: 30px;
+    }
+}
+
+@media (max-width:780px) {
+    .menu{
+        display: block;
+    }
+    .book{
+        margin: 0;
+    }
+    .menu.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        gap: 40px;
+        flex-direction: column;
+        background-color: #292525;
+        background-color: rgba(0,0,0,0.5);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-links:nth-child(1){
+        padding-top: 20px;
+    }
+    .nav-links:last-child{
+        padding-bottom: 20px;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+}
+
+@media (max-width:425px){
+    .logo{
+        margin: 0 0 0 10px;
+        width: 150px
+    }
+    .book{
+        margin: 0 10px 0 0;
+        padding: 5px 10px;
+        font-size: 12px;
+        background-color: #ffd75a;
+        color: #000;
+        border-radius: 20px;
+        border: none;
+    }
+    .menu{
+        margin: 0 10px 0 0;
+    }
+}
