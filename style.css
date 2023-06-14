@@ -9,7 +9,7 @@
     font-family: 'Poppins', sans-serif;
 }
 .hero{
-    height: 100vh;
+    height: 85vh;
     width: 100%;
     background: url(./images/hero-image-renew.jpg);
     background-repeat: no-repeat;
@@ -74,12 +74,45 @@ nav{
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;;
 }
+
+/* nav part complete */
+
+.hero_mid{
+    width: 45%;
+    margin: 7% auto;
+    text-align: center;
+}
+.hero_mid h1{
+    color: #fff;
+    font-size: 35px;
+    line-height: 50px;
+}
+.hero_mid p{
+    color: #fff;
+    margin-top: 10px;
+}
+.explor{
+    margin: 20px auto;
+    width: 150px;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: #ffd75a;
+    border-radius: 20px;
+}
+.explor a{
+    color: #000;
+    text-decoration: none;
+}
+
+/* laptop screen */
+
 @media (max-width:1024px){
     .nav-menu{
         gap: 30px;
     }
 }
 
+/* tablet */
 @media (max-width:780px) {
     .menu{
         display: block;
@@ -117,8 +150,16 @@ nav{
     .nav-menu.active{
         left: 0;
     }
+    .hero_mid h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .hero_mid p{
+        font-size: 14px;
+    }
 }
 
+/* mobile screen */
 @media (max-width:425px){
     .logo{
         margin: 0 0 0 10px;
@@ -135,5 +176,12 @@ nav{
     }
     .menu{
         margin: 0 10px 0 0;
+    }
+    .hero_mid h1{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .hero_mid p{
+        font-size: 10px;
     }
 }
