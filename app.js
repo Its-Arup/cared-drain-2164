@@ -1,3 +1,5 @@
+// hamburger menu
+
 let menu = document.querySelector(".menu")
 let nav_menu = document.querySelector(".nav-menu")
 
@@ -12,6 +14,8 @@ document.querySelectorAll(".nav-links").forEach((e)=>{
         nav_menu.classList.toggle("active")
     })
 })
+
+// destination
 
 let caro = document.querySelector(".caro");
 let isdrag = false,prevPageX,prevScrollLeft;
@@ -38,3 +42,5 @@ let dragstop = ()=>{
 caro.addEventListener("mousedown",dragstart);
 caro.addEventListener("mousemove",drag);
 caro.addEventListener("mouseup",dragstop);
+
+
