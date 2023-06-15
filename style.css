@@ -169,7 +169,7 @@ nav{
     gap: 20px;
     /* max-width: 1200px; */
     overflow: hidden; 
-    height: 380px;  
+    height: 380px; 
 }
 .card{
     /* border: 1px solid red; */
@@ -177,6 +177,7 @@ nav{
     border-radius: 0 30px;
     transition: 0.3s ease-in-out;
     height: 360px;
+    scroll-behavior: smooth; 
 }
 .card:nth-child(1){
     margin-left: 200px;

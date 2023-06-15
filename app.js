@@ -14,19 +14,27 @@ document.querySelectorAll(".nav-links").forEach((e)=>{
 })
 
 let caro = document.querySelector(".caro");
-// let isdrag = false;
+let isdrag = false,prevPageX,prevScrollLeft;
 
-// let dragstart = ()=>{
-//     isdrag = true
-// }
-
-let drag = (e) =>{
-    // if(isdrag == false){
-    //     return;
-    // }
-    e.preventDefault();
-    caro.scrollLeft = e.pageX;
+let dragstart = (e)=>{
+    isdrag = true
+    prevPageX = e.pageX;
+    prevScrollLeft = caro.scrollLeft;
 }
 
-// caro.addEventListener("mousedown",dragstart);
+let drag = (e) =>{
+    if(isdrag == false){
+        return;
+    }
+    e.preventDefault();
+    let posi = e.pageX - prevPageX;
+    caro.scrollLeft = prevScrollLeft - posi;
+}
+
+let dragstop = ()=>{
+    isdrag = false;
+}
+
+caro.addEventListener("mousedown",dragstart);
 caro.addEventListener("mousemove",drag);
+caro.addEventListener("mouseup",dragstop);
