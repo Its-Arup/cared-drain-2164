@@ -104,6 +104,55 @@ nav{
     text-decoration: none;
 }
 
+/*  travel info start here  */
+
+.info{
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+}
+.info >h2{
+    font-weight: 500;
+    font-size: 30px;
+}
+.info >p{
+    margin: 20px 0;
+}
+.info >div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 90px auto;
+}
+.info >div >div{
+    width: 30%;
+    border-radius: 0 40px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+}
+.info >div >div >i{
+    padding: 10px 0;
+    font-size: 25px;
+    transition: 0.3s ease-in-out;
+}
+.info >div >div:hover >i{
+    color: #fc8067;
+}
+.info >div >div >h3{
+    margin: 10px 0;
+    font-weight: 500;
+}
+.info >div >div >p{
+    margin: 20px 0;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+/*  travel info End here  */
+
+.sapcer{
+    margin-top: 500px;
+}
 /* laptop screen */
 
 @media (max-width:1024px){
