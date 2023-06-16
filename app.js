@@ -69,3 +69,23 @@ var splide = new Splide( '.splide', {
   } );
   
   splide.mount();
+
+//   --------
+
+let userdata = JSON.parse(localStorage.getItem("userdata")) || [];
+let form = document.querySelector("#form")
+
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    let obj={
+        name:form.name.value,
+        phone:form.phone.value,
+        message:form.message.value,
+    }
+    userdata.push(obj)
+    alert("Your Response Has Been Recorded")
+    localStorage.setItem("userdata",JSON.stringify(userdata))
+    form.name.value ="";
+    form.phone.value ="";
+    form.message.value="";
+})
