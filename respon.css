@@ -52,6 +52,23 @@
     .hero_mid p{
         font-size: 14px;
     }
+    .container >div{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container >div >div:first-child{
+        width: 100%;
+    }
+    .container >div >div:last-child{
+        text-align: center;
+        width: 100%;
+    }
+    .container >div >div:last-child p:nth-child(3){
+        padding: 0 2.5%;
+        font-size: 14px;
+        margin-top: 10px;
+    }
 }
 
 /* mobile screen */

@@ -69,6 +69,8 @@ nav{
 
 /* nav part complete */
 
+
+/* info part */
 .info{
     width: 60%;
     margin: 50px auto;
@@ -81,7 +83,35 @@ nav{
 .info >p{
     margin: 20px 0;
 }
+.info >div{
+    margin: 30px auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* border: 1px solid red;  */
+}
+.info >div >div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 5px;
+}
+.info >div >div >input{
+    width: 90%;
+    border: none;
+    padding: 5px;
+    outline: none;
+}
+.info >div >select{
+    width: 25%;
+    border-radius: 20px;
+    padding: 5px;
+}
 
+/* info part end here */
 /* contaniner */
 .container{
     width: 70%;
@@ -115,4 +145,27 @@ nav{
 }
 .container >div >div:last-child{
     width: 55%;
+}
+.container >div >div:last-child h2{
+    margin: 10px 0;
+}
+.container >div >div:last-child p:nth-child(3){
+    padding-right: 5%;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.container >div >div:last-child h4{
+    font-size: 20px;
+    color: #fc8067;
+    margin: 10px 0;
+}
+.container >div >div:last-child button{
+    margin: 10px 0;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    background-color: #ffd75a;
+    border-radius: 0 15px;
+    cursor: pointer;
+    font-size: 16px;
 }

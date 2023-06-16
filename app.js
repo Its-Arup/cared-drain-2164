@@ -44,3 +44,8 @@ caro.addEventListener("mousemove",drag);
 caro.addEventListener("mouseup",dragstop);
 
 
+let book = document.querySelector(".book")
+
+book.addEventListener("click",()=>{
+    window.location.assign("booking.html")
+})
