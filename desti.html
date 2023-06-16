@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="desti.css">
     <link rel="stylesheet" href="respon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Wandering Wandarer</title>
 </head>
 <body>
@@ -35,12 +36,27 @@
         <section class="info">
             <h2>Your Travel Informatioon</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. unde nobis, placeat ipsum.</p>
+
+            <div>
+                <div>
+                    <input type="text" placeholder="Search your Destination" id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <select id="filter">
+                    <option value="">Filter</option>
+                    <option value="high">Price high to low</option>
+                    <option value="low">Price low to high</option>
+                    <option value="full">Tour type Full-day</option>
+                    <option value="half">Tour type Half-day</option>
+                </select>
+            </div>
+           
         </section>
 <!-- ---- -->
     <div class="container">
         <!-- all data append here -->
     </div>
 </body>
-<script src="app.js"></script>
+<!-- <script src="app.js"></script> -->
 <script src="./desti.js"></script>
 </html>

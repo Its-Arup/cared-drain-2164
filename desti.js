@@ -1,3 +1,25 @@
+// hamburger menu
+
+let menu = document.querySelector(".menu")
+let nav_menu = document.querySelector(".nav-menu")
+
+menu.addEventListener("click",() =>{
+    menu.classList.toggle("active")
+    nav_menu.classList.toggle("active")
+})
+
+document.querySelectorAll(".nav-links").forEach((e)=>{
+    e.addEventListener("click",()=>{
+        menu.classList.toggle("active")
+        nav_menu.classList.toggle("active")
+    })
+})
+let book = document.querySelector(".book")
+
+book.addEventListener("click",()=>{
+    window.location.assign("booking.html")
+})
+
 let api = [
     {
         name:"Taj Mahal",
@@ -117,7 +139,42 @@ console.log(api)
 
 let lsdata = JSON.parse(localStorage.getItem("cart")) || [];
 let cont = document.querySelector(".container");
+let filter = document.querySelector("#filter")
 
+
+// filter done
+filter.addEventListener("change",()=>{
+    if(filter.value == ""){
+        display(api)
+    }else{
+       if(filter.value =="high"){
+        let filterdata = api.sort((a,b)=>{
+            return b.price - a.price
+        })
+        display(filterdata)
+       }else if(filter.value =="low"){
+        let filterdata = api.sort((a,b)=>{
+            return a.price - b.price
+        })
+        display(filterdata)
+       }else if(filter.value == "full"){
+        let filterdata = api.filter((e)=>{
+            if(e.type =="Full-Day Tour"){
+                return e
+            }
+        })
+        display(filterdata)
+       }else if(filter.value == "half"){
+        let filterdata = api.filter((e)=>{
+            if(e.type =="Half-Day Tour"){
+                return e
+            }
+        })
+        display(filterdata)
+       }
+    }
+})
+// ---
 
 function display(data){
     cont.innerHTML =null;
