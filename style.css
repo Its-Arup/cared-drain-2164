@@ -232,7 +232,7 @@ nav{
 
 .exp{
     width: 60%;
-    margin: 50px auto;
+    margin: 100px auto;
     text-align: center;
 }
 .exp h2{
@@ -283,11 +283,143 @@ nav{
 .sl:hover{
     transform: translateY(-10px);
 }
-.sapcer{
-    margin-top: 500px;
+
+
+/* --- connect ----- */
+
+.connect{
+    width: 60%;
+    margin: 100px auto;
+    text-align: center;
+}
+.connect >h2{
+    font-weight: 500;
+    font-size: 30px;
+}
+.connect >p{
+    margin: 20px 0;
+}
+#form{
+    margin: 50px auto;
+    width: 100%;
+}
+#name{
+    width: 45%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 0 30px;
+    border: 2px solid #fc8067;
+    outline: none;
+}
+#phone{
+    width: 45%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 0 30px;
+    border: 2px solid #fc8067;
+    outline: none;
+    margin: 0 0 20px 20px;
+}
+#message{
+    width: 90%;
+    height: 300px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+    border-radius: 0 30px;
+    border: 2px solid #fc8067;
+    outline: none;
+}
+#submit{
+    display: block;
+    background-color: #fc8067;
+    margin: 20px auto;
+    width: 100px;
+    padding: 10px;
+    border-radius: 0 20px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+#submit:hover{
+    transform: translateY(-10px);
 }
 
+/* footer */
+.smallspace{
+    margin: 30px 0;
+}
+.footer{
+    /* height: 400px; */
+    width: 100%;
+    background-color: #f8f8fb;
+    display: flex;
+    justify-content: space-around;
+}
+.comp{
+    width: 30%;
+}
+.comp p{
+    padding: 0 10px;
+    margin: 10px 0;
+}
+.icons{
+    margin: 30px 0 30px 20px;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+.icons >div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px dashed #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+.icons >div >i{
+    color: #000;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+}
+.icons >div:hover{
+    background-color: #fc8067;
+}
+.icons >div:hover >i{
+    color: #fff;
+}
+.compinfo >div{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.compinfo >div >p{
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.compinfo >div >p:hover{
+    color: #fc8067
+}
+.one{
+    width: 19%;
+    margin-left: 10px;
+}
+.two{
+    width: 19%;
+    margin-left: 10px;
+}
+.three{
+    width: 19%;
+    margin-left: 10px;
+}
 
+/* .sapcer{
+    margin-top: 500px;
+} */
 /* laptop screen */
 
 @media (max-width:1024px){
@@ -348,6 +480,9 @@ nav{
     .info >div >div{
         width: 100%;
         gap: 20px;
+    }
+    .footer{
+        flex-direction: column;
     }
 }
 
