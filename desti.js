@@ -140,6 +140,19 @@ console.log(api)
 let lsdata = JSON.parse(localStorage.getItem("cart")) || [];
 let cont = document.querySelector(".container");
 let filter = document.querySelector("#filter")
+let search = document.querySelector("#search")
+
+// search function done
+
+search.addEventListener("input",()=>{
+    let sear = api.filter((e)=>{
+        if(e.name.toUpperCase().includes(search.value.toUpperCase())){
+            return e
+        }
+    })
+   display(sear)
+})
+
 
 
 // filter done
