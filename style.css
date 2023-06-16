@@ -225,6 +225,64 @@ nav{
 .card:hover .newbtn{
     transform: translateX(10px);
 }
+
+
+/* ---- */
+
+
+.exp{
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+}
+.exp h2{
+    font-weight: 500;
+    font-size: 30px;
+}
+.exp >p{
+    margin: 20px 0;
+}
+.exp section{
+    margin: 50px auto;
+}
+
+.sl{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 0 30px;
+    transition: 0.3s ease-in-out;
+}
+.sl >div{
+    display: flex;
+    width: 98%;
+    margin: 10px auto;
+}
+.sl >div >div:first-child{
+    width: 70px;
+    height: 70px;
+    border-radius: 0 30px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.sl >div >div>img{
+    width: 100%;
+}
+.sl >div >div:last-child{
+    margin: 0 15px;
+}
+.sl >div>div>h3{
+    font-weight: 400;
+}
+.sl > .fa-solid{
+    color: #fc8067;
+}
+.sl >p{
+    margin: 10px 0;
+    padding: 0 3%;
+    color: rgb(138, 136, 136);
+}
+.sl:hover{
+    transform: translateY(-10px);
+}
 .sapcer{
     margin-top: 500px;
 }
@@ -283,6 +341,13 @@ nav{
     }
     .hero_mid p{
         font-size: 14px;
+    }
+    .info >div{
+        flex-direction: column;
+    }
+    .info >div >div{
+        width: 100%;
+        gap: 20px;
     }
 }
 
