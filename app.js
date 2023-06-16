@@ -49,3 +49,11 @@ let book = document.querySelector(".book")
 book.addEventListener("click",()=>{
     window.location.assign("booking.html")
 })
+
+let newbtn = document.querySelectorAll(".newbtn");
+
+newbtn.forEach((e)=>{
+    e.addEventListener("click",()=>{
+        window.location.assign("desti.html")
+    })
+})

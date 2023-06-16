@@ -169,14 +169,14 @@ nav{
     gap: 20px;
     /* max-width: 1200px; */
     overflow: hidden; 
-    height: 380px; 
+    height: 385px; 
 }
 .card{
     /* border: 1px solid red; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
     border-radius: 0 30px;
     transition: 0.3s ease-in-out;
-    height: 360px;
+    height: 370px;
     scroll-behavior: smooth; 
 }
 .card:nth-child(1){
@@ -202,13 +202,29 @@ nav{
     display: block;
     transition: 0.3s ease-in-out;
 }
+.card .newbtn{
+    border: none;
+    margin: 10px 0;
+    width: 50px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.card .newbtn i{
+    font-size: 16px;
+    color: #fc8067;
+}
+
+
 .card:hover >div img{
     transform: scale(1.1);
 }
 .card:hover{
     transform: translateY(-10px);
 }
-
+.card:hover .newbtn{
+    transform: translateX(10px);
+}
 .sapcer{
     margin-top: 500px;
 }
