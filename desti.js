@@ -24,7 +24,7 @@ let api = [
     {
         name:"Taj Mahal",
         Img:"https://www.travelandleisure.com/thmb/wdUcyBQyQ0wUVs4wLahp0iWgZhc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/taj-mahal-agra-india-TAJ0217-9eab8f20d11d4391901867ed1ce222b8.jpg",
-        price:5290,
+        price:5520,
         description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta ut saepe perferendis quia repellat.",
         id:1,
         type:"Full-Day Tour"
@@ -133,6 +133,30 @@ let api = [
         id:14,
         type:"Full-Day Tour"
     },
+    {
+        name:"Victoria Memorial",
+        Img:"https://www.holidify.com/images/cmsuploads/compressed/attr_1884_20190329150438.jpg",
+        price:5800,
+        description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta ut saepe perferendis quia repellat.",
+        id:15,
+        type:"Half-Day Tour"
+    },
+    {
+        name:"Indian Museum Kolkata",
+        Img:"https://kolkatatourism.travel/images/places-to-visit/headers/indian-museum-kolkata-entry-fee-timings-holidays-reviews-header.jpg",
+        price:3850,
+        description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta ut saepe perferendis quia repellat.",
+        id:16,
+        type:"Half-Day Tour"
+    },
+    {
+        name:"Gangtok",
+        Img:"https://www.esikkimtourism.in/wp-content/uploads/2019/04/3rd-image.jpg",
+        price:6550,
+        description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta ut saepe perferendis quia repellat.",
+        id:17,
+        type:"Full-Day Tour"
+    },
 ]
 
 console.log(api)
@@ -201,12 +225,14 @@ function display(data){
         let name = document.createElement("h2")
         let type = document.createElement("p")
         let des = document.createElement("p")
+        let person = document.createElement("h5")
         let price = document.createElement("h4")
         let cartbtn = document.createElement("button")
 
         name.textContent = el.name;
         type.textContent = el.type;
         des.textContent = el.description;
+        person.textContent = "Price per person"
         price.textContent = el.price;
         cartbtn.textContent = "Book Now"
         el.quatity = 1;
@@ -216,11 +242,12 @@ function display(data){
                     return alert("This Tour is allready added")
                 }
             }
+            alert("Tour is addd to Basket")
             lsdata.push(el)
             localStorage.setItem("cart",JSON.stringify(lsdata))
         })
         left.append(img);
-        right.append(name,type,des,price,cartbtn)
+        right.append(name,type,des,person,price,cartbtn)
         card.append(left,right);
         cont.append(card)
     });
