@@ -22,13 +22,23 @@ book.addEventListener("click",()=>{
 
 let cont = document.querySelector(".container");
 let data = JSON.parse(localStorage.getItem("cart")) || [];
-let cuponbtn = document.querySelector("#cupon");
+let cupon = document.querySelector("#cupon > input")
+let cuponbtn = document.querySelector("#cupon >button");
+let cart_price = document.querySelector(".cart-price");
+let cart_total = document.querySelector(".cart-total");
+let flag = true;
+let pay = document.querySelector(".pay")
 
-
+pay.addEventListener("click",()=>{
+    window.location.assign("buy.html")
+})
 
 function display(api){
     cont.innerHTML = "";
     let sum = 0;
+    let gstadd;
+    let gst;
+    
     api.forEach((el)=>{
         let card = document.createElement("div")
         let left = document.createElement("div");
@@ -58,7 +68,7 @@ function display(api){
         pls.textContent = "Add person";
         remove.textContent = "Remove Tour";
         
-
+        
         remove.addEventListener("click",()=>{
             data = data.filter((e)=>{
               if(el.id!=e.id){
@@ -75,7 +85,8 @@ function display(api){
                 el.quatity = 1;
             }
             sum += el.quatity*el.price
-            console.log(sum)
+            // console.log(sum)
+            cart_price.textContent = sum
             localStorage.setItem("cart",JSON.stringify(data))
             display(data)
         })
@@ -84,10 +95,29 @@ function display(api){
             el.quatity++ 
             sum += el.quatity*el.price
             console.log(sum)
+            cart_price.textContent = sum
             localStorage.setItem("cart",JSON.stringify(data))
             display(data)
         })
-        
+        sum += el.quatity*el.price
+        cart_price.textContent = sum
+        gstadd = (sum*5)/100
+        gst = gstadd+sum
+        cart_total.textContent = gst
+
+        cuponbtn.addEventListener("click",()=>{
+            // console.log(sum)
+            if(flag){
+                if(cupon.value === "NEWUSER50"){
+                    let new_sum = Math.floor( (gst * 50) /100)
+                    new_sum = gst - new_sum
+                    cart_total.textContent = new_sum;
+                    flag = false;
+                 }
+            }
+           
+          })
+
         left.append(img);
         right.append(name,type,des,person,price,quantity,min,pls,remove)
         card.append(left,right);
