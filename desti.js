@@ -218,6 +218,7 @@ function display(data){
 
     data.forEach(el => {
         let card = document.createElement("div")
+        card.setAttribute("data-aos","fade-left")
         let left = document.createElement("div");
         let right = document.createElement("div");
         let img = document.createElement("img");
