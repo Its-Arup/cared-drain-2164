@@ -216,9 +216,13 @@ filter.addEventListener("change",()=>{
 function display(data){
     cont.innerHTML =null;
 
-    data.forEach(el => {
+    data.forEach((el,index) => {
         let card = document.createElement("div")
-        card.setAttribute("data-aos","fade-left")
+        if(index%2==0){
+            card.setAttribute("data-aos","fade-left")
+        }else{
+            card.setAttribute("data-aos","fade-right")
+        }
         let left = document.createElement("div");
         let right = document.createElement("div");
         let img = document.createElement("img");
